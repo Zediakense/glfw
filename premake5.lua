@@ -100,13 +100,16 @@ project "GLFW"
 
 	filter "configurations:Debug"
 		runtime "Debug"
+		buildoptions "/MTd"
 		symbols "on"
 
 	filter "configurations:Release"
 		runtime "Release"
+		buildoptions "/MT"
 		optimize "speed"
 
     filter "configurations:Dist"
 		runtime "Release"
+		buildoptions "/MT"
 		optimize "speed"
         symbols "off"
